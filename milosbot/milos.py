@@ -8,6 +8,8 @@
 import discord
 from discord import Intents
 from discord.ext import commands
+
+import main
 from main import token
 import milosbot.functions.send_message as sending_task
 from milosbot import milos_commands
@@ -32,7 +34,6 @@ def client_events(milos_bot):
     @milos_bot.event
     async def on_ready():
         print(f'{milos_bot.user} is now running')
-        print(f'Guild: {milos_bot.guilds}')
         try:
             sync = await milos_bot.tree.sync()
 
@@ -49,12 +50,6 @@ def client_events(milos_bot):
         channel = str(message.channel)
         print(f"{username} said '{user_message}' ({channel})")
         await sending_task.send_message(message, user_message)
-
-    #@milos_bot.tree.command()
-    #async def settings(ctx: discord.Interaction):
-        #await ctx.response.send_message('Settings run')
-        #milos_bot.tree.clear_commands(guild=ctx.guild)
-        #await milos_bot.tree.sync(guild=ctx.guild)
 # --------------------------------------------------------------------- #
 
 
