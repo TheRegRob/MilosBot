@@ -20,6 +20,8 @@ import milosbot.functions.handle_responses as responses_task
 async def send_message(message, user_message):
     try:
         res = responses_task.handle_response(user_message)
+        if res is None:
+            return
         if not res.isEmbed:
             await message.channel.send(res.description)
         else:

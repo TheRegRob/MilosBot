@@ -17,9 +17,17 @@ import milosbot.milos as milos
 
 # --- Variables ------------------------------------------------------- #
 # --------------------------------------------------------------------- #
-fenv = open('data/restricted/env.json')
-env = json.load(fenv)
-fenv.close()
+fl_token = open('data/restricted/token.json')
+token = json.load(fl_token)
+fl_token.close()
+
+fl_cmds = open('data/resources/commands.json')
+cmds = json.load(fl_cmds)
+fl_cmds.close()
+
+fl_triggers = open('data/resources/trigger_strings.json')
+triggers = json.load(fl_triggers)
+fl_triggers.close()
 
 # --- Methods & Functions --------------------------------------------- #
 # --------------------------------------------------------------------- #

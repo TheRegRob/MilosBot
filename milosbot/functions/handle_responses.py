@@ -5,7 +5,8 @@
 # --------------------------------------------------------------------- #
 
 # --- Imports --------------------------------------------------------- #
-import data.gifs.linked
+from main import triggers
+import data.resources.gifs.linked
 import classes.embed_message
 import random
 # --------------------------------------------------------------------- #
@@ -42,14 +43,14 @@ def handle_response(message) -> classes.embed_message.EmbedMessage:
     p_message = message.lower()
 
     match p_message:
-        case p_message if 'gogo' in p_message:
+        case p_message if triggers["str_gogo"] in p_message:
             print("'gogo' matched!")
-            return classes.embed_message.EmbedMessage(_isEmbed=False, _description=data.gifs.linked.GOGO_GIF)
-        case p_message if any(x in p_message for x in ["agostini", "cracra", "cra cra"]):
+            return classes.embed_message.EmbedMessage(_isEmbed=False, _description=data.resources.gifs.linked.GOGO_GIF)
+        case p_message if any(x in p_message for x in triggers["str_cracra"]):
             print("'cracra' matched!")
-            idx = random.randint(0, len(data.gifs.linked.CRACRA_GIFS) - 1)
-            return classes.embed_message.EmbedMessage(_isEmbed=False, _description=data.gifs.linked.CRACRA_GIFS[idx])
-        case p_message if 'situani' in p_message:
+            idx = random.randint(0, len(data.resources.gifs.linked.CRACRA_GIFS) - 1)
+            return classes.embed_message.EmbedMessage(_isEmbed=False, _description=data.resources.gifs.linked.CRACRA_GIFS[idx])
+        case p_message if triggers["str_situani"] in p_message:
             print("'situani' matched!")
             return handle_situani_response()
         case _:
