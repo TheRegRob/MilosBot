@@ -23,7 +23,7 @@ async def send_message(message, user_message):
         if res is None:
             return
         if not res.isEmbed:
-            await message.channel.send(res.description)
+            await message.channel.send(res.description, file=res.file)
         else:
             emb = discord.Embed(title=res.title,
                                 description=res.description,

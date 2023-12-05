@@ -3,10 +3,13 @@
 # Date   :	02/12/2023                                                  #
 # Author :	Robin Reggiani                                              #
 # --------------------------------------------------------------------- #
-
+import discord
+import os
 # --- Imports --------------------------------------------------------- #
 from main import triggers
+from main import RES_PATH
 import classes.embed_message
+import data.resources.pictures as res
 import random
 # --------------------------------------------------------------------- #
 
@@ -27,7 +30,13 @@ def handle_response(message) -> classes.embed_message.EmbedMessage:
             if s in p_message:
                 if not dataz['EMBED']:
                     idx = random.randint(0, len(dataz['IMAGE']) - 1)
-                    return classes.embed_message.EmbedMessage(_isEmbed=False, _description=dataz['IMAGE'][idx])
+                    s_image: str = dataz['IMAGE'][idx]
+                    if s_image.startswith("https"):
+                        return classes.embed_message.EmbedMessage(_isEmbed=False, _description=s_image)
+                    else:
+                        f_path: str = RES_PATH + s_image
+                        f_image = discord.File(f_path)
+                        return classes.embed_message.EmbedMessage(_isEmbed=False, _file=f_image)
                 else:
                     idx_t = random.randint(0, len(dataz['TITLE']) - 1)
                     idx_d = random.randint(0, len(dataz['DESC']) - 1)
