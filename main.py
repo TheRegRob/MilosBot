@@ -6,6 +6,8 @@
 
 # --- Imports --------------------------------------------------------- #
 import json
+import os
+import random
 from typing import Any
 
 import discord
@@ -83,6 +85,10 @@ fl_cmds.close()
 fl_triggers = open('data/resources/triggers.json')
 triggers = json.load(fl_triggers)
 fl_triggers.close()
+
+fl_setup = open('data/resources/setup.json')
+milos_setup = json.load(fl_setup)
+fl_setup.close()
 
 gifs_dict["Agostini"] = agostini_gifs
 gifs_dict["BillyHerrington"] = billy_gifs

@@ -1,28 +1,25 @@
 {
-  "enjoy": {
-    "NAME": "enjoy",
-    "DESC": "Channel all your gachi energy to enjoy upon the enemy failures",
+  "gachi_scream": {
+    "NAME": "gachi_scream",
+    "DESC": "AAAAAAAAAAAAAAAAaaaaaaahhhhhhhhhh",
+    "RES_FOLD": "data/resources/soundboard/screams/",
     "ARGS": [
-      "",
-      "",
       ""
     ]
   },
-  "enrage": {
-    "NAME": "enrage",
-    "DESC": "Concentrates all the gachi fury and summon the anger of all companions",
+  "gachi_gasm": {
+    "NAME": "gachi_gasm",
+    "DESC": "Ooooooh I'm ffffuckin' cumming",
+    "RES_FOLD": "data/resources/soundboard/gasm/",
     "ARGS": [
-      "",
-      "",
       ""
     ]
   },
-  "hold_on": {
-    "NAME": "hold_on",
-    "DESC": "Don't take a step back. We are here.",
+  "gachi_quotes": {
+    "NAME": "gachi_quotes",
+    "DESC": "Fisting is.. 300 bucks",
+    "RES_FOLD": "data/resources/soundboard/quotes/",
     "ARGS": [
-      "",
-      "",
       ""
     ]
   }

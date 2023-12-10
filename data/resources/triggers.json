@@ -101,11 +101,159 @@
     "EMBED": false,
     "TITLE": [""],
     "DESC": [""],
-    "FOLD_THUMB" : "",
+    "FOLD_THUMB" : [""],
     "THUMB": [""],
     "FOLD_IMG" : [
       "BillyHerrington"
     ],
     "IMAGE": [""]
+  },
+  "str_milos": {
+    "TRIGGER": [
+      "ricardo",
+      "milos",
+      "dance",
+      "airflex"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "RicardoMilos"
+    ],
+    "IMAGE": [""]
+  },
+  "str_brad mcguire": {
+    "TRIGGER": [
+      "brad",
+      "mcguire",
+      "shit",
+      "sorry",
+      "daddy"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "BradMcGuire"
+    ],
+    "IMAGE": [""]
+  },
+  "str_danny_lee": {
+    "TRIGGER": [
+      "danny",
+      "lee",
+      "kazuya"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "DannyLee"
+    ],
+    "IMAGE": [""]
+  },
+  "str_mark_wolff": {
+    "TRIGGER": [
+      "mark",
+      "wolff",
+      "jabroni"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "MarkWolff"
+    ],
+    "IMAGE": [""]
+  },
+  "str_seasonals": {
+    "TRIGGER": [
+      "christmas",
+      "xmas",
+      "natale",
+      "buon anno"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "Seasonals"
+    ],
+    "IMAGE": [""]
+  },
+  "str_steve_rambo": {
+    "TRIGGER": [
+      "steve",
+      "rambo",
+      "suck"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "SteveRambo"
+    ],
+    "IMAGE": [""]
+  },
+  "str_van_darkholme": {
+    "TRIGGER": [
+      "van",
+      "darkholme",
+      "artist",
+      "performer",
+      "fuck you"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "VanDarkholme"
+    ],
+    "IMAGE": [""]
+  },
+  "str_gachigasm": {
+    "TRIGGER": [
+      "gachigasm"
+    ],
+    "EMBED": true,
+    "TITLE": ["Empty tester"],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      ""
+    ],
+    "IMAGE": [""]
+  },
+  "str_ban": {
+    "TRIGGER": [
+      "ban"
+    ],
+    "EMBED": true,
+    "TITLE": ["ENJOY THE LASH OF THE SPANKING"],
+    "DESC": [".. at least it smells like it"],
+    "FOLD_THUMB" : [
+      "Gachies"
+    ],
+    "THUMB": ["Billy_chokes"],
+    "FOLD_IMG" : [
+      "RicardoMilos"
+    ],
+    "IMAGE": ["Milos_ban"]
   }
 }

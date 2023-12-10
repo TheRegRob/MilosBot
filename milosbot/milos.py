@@ -43,13 +43,28 @@ def client_events(milos_bot):
 
     @milos_bot.event
     async def on_message(message):
-        if message.author == milos_bot.user:
+        if (message.author == milos_bot.user or
+                str(message.content).startswith("http")):
             return
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
         print(f"{username} said '{user_message}' ({channel})")
-        await sending_task.send_message(message, user_message)
+        # -------- Krone's part ----------------------------------------
+        ctx = await milos_bot.get_context(message)
+        is_mention = False
+        if milos_bot.user.mentioned_in(message) and message.mention_everyone is False:
+            if message.reference is None:
+                is_mention = True
+            else:
+                reply_msg = await ctx.channel.fetch_message(message.reference.message_id)
+                if reply_msg.author != milos_bot.user:
+                    is_mention = True
+        # --------------------------------------------------------------
+        if is_mention:
+            await sending_task.send_intro(message)
+        else:
+            await sending_task.send_message(message, user_message)
 # --------------------------------------------------------------------- #
 
 
@@ -59,7 +74,9 @@ def milos_run():
     global milosCommands
     milosIntents = discord.Intents.default()
     milosIntents.message_content = True
-    milos_bot = commands.Bot(command_prefix=commands.when_mentioned_or("/"), intents=milosIntents)
+    milos_bot = commands.Bot(command_prefix=str(commands.when_mentioned_or("/")),
+                             intents=milosIntents,
+                             allowed_mention=discord.AllowedMentions(everyone=True))
     milosCommands = milos_commands.MilosCommands(reference_event=milos_bot)
     client_events(milos_bot)
     milos_bot.run(TOKEN)
