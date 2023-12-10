@@ -1,0 +1,111 @@
+{
+  "str_gogo": {
+    "TRIGGER": [
+      "gogo"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [""],
+    "IMAGE": [
+      "Milos_gogo"
+    ]
+  },
+  "str_cracra": {
+    "TRIGGER": [
+      "cracra",
+      "cra cra",
+      "agostini"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : ["Agostini"],
+    "IMAGE": [""]
+  },
+  "str_wtf": {
+    "TRIGGER": [
+      "wtf"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : ["Pictures"],
+    "IMAGE": [
+      "WTF_Doggo"
+    ]
+  },
+  "str_sorry": {
+    "TRIGGER": [
+      "oh shit i'm sorry"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : [""],
+    "IMAGE": [
+      "Brad_sorry"
+    ]
+  },
+  "str_situani": {
+    "TRIGGER": [
+      "situani"
+    ],
+    "EMBED": true,
+    "TITLE": [
+      "YOU LIKE EMBARASSING ME AH?"
+    ],
+    "DESC": [
+      "<@!140743498209951744>"
+    ],
+    "FOLD_THUMB" : ["BillyHerrington"],
+    "THUMB": [
+      "Billy_phone"
+    ],
+    "FOLD_IMG" : ["BillyHerrington"],
+    "IMAGE": [
+      "Billy_wakeup"
+    ]
+  },
+  "str_CumOn": {
+    "TRIGGER": [
+      "come on",
+      "comeon",
+      "cum on",
+      "cumon"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : [""],
+    "THUMB": [""],
+    "FOLD_IMG" : ["Gachies"],
+    "IMAGE": [""]
+  },
+    "str_billy": {
+    "TRIGGER": [
+      "billy",
+      "herrington",
+      "aniki",
+      "gym",
+      "boss"
+    ],
+    "EMBED": false,
+    "TITLE": [""],
+    "DESC": [""],
+    "FOLD_THUMB" : "",
+    "THUMB": [""],
+    "FOLD_IMG" : [
+      "BillyHerrington"
+    ],
+    "IMAGE": [""]
+  }
+}

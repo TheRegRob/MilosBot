@@ -8,12 +8,12 @@
 import discord
 import json
 from discord.ext import commands
-from main import cmds
+import main
 import milosbot.functions.send_message as sending_task
 
 
 def get_json_pars(cmd: str) -> [str, str]:
-    return [cmds[cmd]['NAME'], cmds[cmd]['DESC']]
+    return [main.cmds[cmd]['NAME'], main.cmds[cmd]['DESC']]
 
 
 class MilosCommands:

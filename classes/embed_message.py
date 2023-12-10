@@ -13,7 +13,8 @@
 
 # --- Constructors ---------------------------------------------------- #
 class EmbedMessage:
-    def __init__(self, _isEmbed, _description=None, _title=None, _type=None, _color=None, _image=None, _thumbnail=None, _file=None):
+    def __init__(self, _isEmbed, _description=None, _title=None, _type=None,
+                 _color=None, _image=None, _thumbnail=None, _thumbfile=None, _imgfile=None):
         self.isEmbed = _isEmbed
         self.title = _title
         self.description = _description
@@ -21,7 +22,8 @@ class EmbedMessage:
         self.color = _color
         self.image = _image
         self.thumbnail = _thumbnail
-        self.file = _file
+        self.thumbfile = _thumbfile
+        self.imgfile = _imgfile
 # --------------------------------------------------------------------- #
 
 # --- Methods & Functions --------------------------------------------- #
