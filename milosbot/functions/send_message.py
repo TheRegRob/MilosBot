@@ -56,4 +56,15 @@ async def send_intro(message):
         await message.channel.send(embed=emb)
     except Exception as e:
         print(e)
+
+
+async def response_vaporbot(message):
+    if "H E L L O" in str(message.embeds[0].title):
+        await message.channel.send("https://media1.tenor.com/m/eWjiuU9dVoMAAAAd/steve-rambo-latenight-at-work-steve-rambo.gif")
+    elif "Y U M M Y" in str(message.embeds[0].title):
+        await message.channel.send("https://media1.tenor.com/m/r2nVJ0LQjbUAAAAd/mark-wolff-gachi.gif")
+    elif "E L F A" in str(message.embeds[0].title):
+        await message.channel.send("https://media1.tenor.com/m/IDODzJK0QdAAAAAd/gachi-billy-herrington.gif")
+    elif "C I S A" in str(message.embeds[0].title):
+        await message.channel.send("https://media1.tenor.com/m/L5ubevs1-HsAAAAd/steve-rambo-catalinaville.gif")
 # --------------------------------------------------------------------- #

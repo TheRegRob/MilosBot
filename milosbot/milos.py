@@ -10,7 +10,7 @@ from discord import Intents
 from discord.ext import commands
 
 import main
-from main import token
+from main import token, milos_setup
 import milosbot.functions.send_message as sending_task
 from milosbot import milos_commands
 
@@ -26,6 +26,8 @@ from milosbot import milos_commands
 TOKEN = token['milos_token']
 milosIntents: Intents
 milosCommands: milos_commands
+
+
 # --------------------------------------------------------------------- #
 
 
@@ -35,6 +37,9 @@ def client_events(milos_bot):
     async def on_ready():
         print(f'{milos_bot.user} is now running')
         try:
+            b_st: discord.BaseActivity = discord.Status.online
+            await milos_bot.change_presence(status=discord.Status.online,
+                                            activity=discord.Game(milos_setup['activity_name']))
             sync = await milos_bot.tree.sync()
 
             print(f"Sync {len(sync)} commands(s)")
@@ -43,6 +48,9 @@ def client_events(milos_bot):
 
     @milos_bot.event
     async def on_message(message):
+        if message.author.bot:
+            if message.embeds[0]:
+                await sending_task.response_vaporbot(message)
         if (message.author == milos_bot.user or
                 str(message.content).startswith("http")):
             return
@@ -65,6 +73,8 @@ def client_events(milos_bot):
             await sending_task.send_intro(message)
         else:
             await sending_task.send_message(message, user_message)
+
+
 # --------------------------------------------------------------------- #
 
 
@@ -74,6 +84,8 @@ def milos_run():
     global milosCommands
     milosIntents = discord.Intents.default()
     milosIntents.message_content = True
+    milosIntents.messages = True
+    milosIntents.members = True
     milos_bot = commands.Bot(command_prefix=str(commands.when_mentioned_or("/")),
                              intents=milosIntents,
                              allowed_mention=discord.AllowedMentions(everyone=True))

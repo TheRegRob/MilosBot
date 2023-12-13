@@ -22,5 +22,29 @@
     "ARGS": [
       ""
     ]
+  },
+  "vocal_gachi_scream": {
+    "NAME": "vocal_gachi_scream",
+    "DESC": "AAAAAaaaaaauuuuuuuuugghhh",
+    "RES_FOLD": "data/resources/soundboard/screams/",
+    "ARGS": [
+      ""
+    ]
+  },
+  "vocal_gachi_quote": {
+    "NAME": "vocal_gachi_quote",
+    "DESC": "Get out of that.. uh.. jabroni outfit",
+    "RES_FOLD": "data/resources/soundboard/quotes/",
+    "ARGS": [
+      ""
+    ]
+  },
+  "vocal_gachi_gasm": {
+    "NAME": "vocal_gachi_gasm",
+    "DESC": "Move your tongue round more",
+    "RES_FOLD": "data/resources/soundboard/gasm/",
+    "ARGS": [
+      ""
+    ]
   }
 }

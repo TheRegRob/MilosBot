@@ -109,6 +109,7 @@ def reload_files():
     wtfdoggo_img = discord.File('data/resources/pictures/WTF_Doggo.PNG')
     imgs_dict["WTF_Doggo"] = wtfdoggo_img
 
+
 # --- Main ------------------------------------------------------------ #
 # --------------------------------------------------------------------- #
 if __name__ == '__main__':
