@@ -6,6 +6,7 @@
 
 # --- Imports --------------------------------------------------------- #
 import json
+import sys
 import os
 import random
 from typing import Any
@@ -29,6 +30,9 @@ RES_GIFS_PATH = "data/resources/gifs/"
 # --------------------------------------------------------------------- #
 imgs_dict = {}
 gifs_dict = {}
+phy = 'development'
+full_path = ""
+release_file_path = '/home/krone/Bots/VAPORBOT2020/'
 
 # --- Methods & Functions --------------------------------------------- #
 # --------------------------------------------------------------------- #
@@ -113,4 +117,10 @@ def reload_files():
 # --- Main ------------------------------------------------------------ #
 # --------------------------------------------------------------------- #
 if __name__ == '__main__':
+    try:
+        phy = sys.argv[1]
+    except IndexError:
+        deploy = 'debug'
+        phy = 'development'
+
     milos.milos_run()
