@@ -161,7 +161,7 @@ def handle_response(message) -> classes.embed_message.EmbedMessage:
 
     dataz = parse_trigger_data(p_message)
     if dataz is None:
-        print("No reponse match found")
+        pass
     else:
         return manage_response(dataz['EMBED'], dataz)
 # --------------------------------------------------------------------- #

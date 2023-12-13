@@ -48,16 +48,18 @@ def client_events(milos_bot):
 
     @milos_bot.event
     async def on_message(message):
-        if message.author.bot:
-            if message.embeds[0]:
-                await sending_task.response_vaporbot(message)
         if (message.author == milos_bot.user or
                 str(message.content).startswith("http")):
             return
+        if message.author.bot:
+            try:
+                if message.embeds:
+                    await sending_task.response_vaporbot(message)
+            except Exception as ex:
+                print(ex)
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
-        print(f"{username} said '{user_message}' ({channel})")
         # -------- Krone's part ----------------------------------------
         ctx = await milos_bot.get_context(message)
         is_mention = False
